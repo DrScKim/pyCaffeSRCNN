@@ -68,27 +68,5 @@ if __name__ == "__main__":
             elif ii == 1:
                 name2 = "biases_" + name
                 d[name2] = np.double(np.reshape(np.ravel(blob.data), (num, 1)))
-
-
-
-
-
-
-
-
-
-    # for name, blobs in net.params.iteritems():
-    #     for ii in range(len(blobs)):
-    #         # Assume here index 0 are the weights and 1 is the bias.
-    #         # This seems to be the case in Caffe.
-    #         if ii == 0:
-    #             name2 = "weight_"+name
-    #         elif ii == 1:
-    #             name2 = "bias_" + name
-    #         else:
-    #             pass  # This is not expected
-    #
-    #         print("%s : %s" % (name2, blobs[ii].data.shape))
-    #         d[name2] = blobs[ii].data
-    #
+    
     scipy.io.savemat('filter' + ".mat", d)
